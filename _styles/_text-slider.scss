@@ -1,0 +1,46 @@
+$text-height: 76px;
+$container-width: 200px;
+
+.text-slider {
+    height: $text-height;
+    max-height: $text-height;
+    overflow: hidden;
+    position: relative;
+    width: $container-width;
+
+    &-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: slide 25s infinite linear;
+        h1 {
+            display: flex;
+            align-items: flex-end;
+            margin: 0;
+            height: $text-height;
+            margin-bottom: $text-height;
+            animation: opacity-pulse 5s infinite;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@keyframes slide {
+    0%, 19% { transform: translateY(0) };
+    20%, 39% { transform: translateY(-$text-height * 2) };
+    40%, 59% { transform: translateY(-$text-height * 4) };
+    60%, 79% { transform: translateY(-$text-height * 6) };
+    80%, 99% { transform: translateY(-$text-height * 8) };
+    99.5% { opacity: 1; transform: translateY(-100%) };
+    99.501% { opacity: 0; transform: translateY(20%) };
+    99.502% { opacity: 1; };
+    100% { opacity: 1; transform: translateY(0)};
+}
+
+@keyframes opacity-pulse {
+    0%, 95% { opacity: 1 };
+    97.5% { opacity: 0; };
+    100% { opacity: 1; };
+}

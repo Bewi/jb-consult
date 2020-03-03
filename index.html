@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jb consult</title>
+  <link rel="stylesheet" href="./index.css" type="text/css" />
+</head>
+
+<body class="vw-100 vh-100">
+  <img class="logo" src="./assets/images/logo.png" />
+
+  <main id="main">
+    <div class="left-pane">
+      <div class="text-slider">
+        <div class="text-slider-list">
+          <h1>people <br />& project</h1>
+          <h1>finance</h1>
+          <h1>restructuring</h1>
+          <h1>change</h1>
+          <h1>interim</h1>
+        </div>
+        <!-- for the transition : https://codepen.io/yoannhel/pen/sJpDj -->
+      </div>
+      <h2 class="text-primary">management</h2>
+    </div>
+
+    <div class="jb">
+      <div class="jb-container">
+        <img class="jb-mask" src="./assets/svgs/jb-mask.svg" />
+        <img class="jb-image jb-image-2" src="./assets/images/jb-background-1.jpg" />
+        <img class="jb-image jb-image-1" src="./assets/images/jb-background-2.jpg" />
+        <img class="jb-image jb-image-small" src="./assets/images/joelle.jpeg" />
+      </div>
+    </div>
+
+    <div class="part-2">
+      <p>
+        On pourrait passer une vie à gravir des montagnes,
+        repousser ses limites et déplacer ses propres frontières.
+        Relever de nouveaux défis et les résoudre sont l'essence même du management.
+      </p>
+      <p class="text-primary">
+        C'est en tout cas ce qui m'anime et me motive dans
+        ce métier. Chaque jour je mets mon énergie, ma créativité, 
+        mes valeurs et mes 25 années d'expérience pluridisciplinaire au service des entrepreneurs d'ici.
+      </p>
+    </div>
+
+    <img src="./assets/svgs/up-arrow.svg" alt="scroll to see more" class="slide-arrow up" />
+    <img src="./assets/svgs/down-arrow.svg" alt="scroll to see more" class="slide-arrow down" />
+  </main>
+  <footer class="contact d-flex">
+    <div>
+      <h3>Prenons contact</h3>
+      <p class="text-primary">Joëlle Borghans</p>
+      <a href="mailto:joelle.borghans@gmail.com">joelle.borghans@gmail.com</a>
+      <a href="tel:+32497187611">+ 32 (0) 497 18 76 11</a>
+    </div>
+    <a class="linkedin" href="https://www.linkedin.com/in/jo%C3%ABlle-borghans-287729191/">
+      <img src="./assets/svgs/linked-in-logo.svg" alt="linked-in-logo">
+    </a>
+  </footer>
+
+  <script type="text/javascript">
+    (function () {
+      document.getElementsByTagName('body')[0].onscroll = function () {
+        debounce(handleScroll, 300);
+      };
+    })();
+
+    function debounce(method, delay) {
+      clearTimeout(method._tId);
+      method._tId = setTimeout(function () {
+        method();
+      }, delay);
+    }
+
+    function handleScroll() {
+      var doc = document.documentElement;
+      var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
+      if (top > 0) {
+        document.getElementById('main').classList.add('scrolled');
+      } else {
+        document.getElementById('main').classList.remove('scrolled');
+      }
+    }
+  </script>
+</body>
+
+</html>

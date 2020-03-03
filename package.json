@@ -1,0 +1,21 @@
+{
+  "name": "jb-consult",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "node-sass _styles/app.scss index.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "scrollmagic": "^2.0.7"
+  },
+  "devDependencies": {
+    "local-web-server": "^4.0.0"
+  }
+}

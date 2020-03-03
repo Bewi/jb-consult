@@ -1,0 +1,38 @@
+
+
+@include font-face("CircularPro", "fonts/CircularPro-Bold/CircularPro-Bold", bold, null, otf); // for texts
+@include font-face("CircularPro", "fonts/CircularPro-Bold/CircularPro-Book", normal, null, otf); // for texts
+@include font-face("3B0B58_0_0", "fonts/MyFontsWebfontsKit/3B0B58_0_0"); // for titls
+@include font-face("OrpheusPro", "fonts/Orpheus-Pro/OrpheusPro", normal, null, otf); // for titls
+
+body {
+    font-family: CircularPro;
+    color: white;
+    background-color: $secondary-color;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: "OrpheusPro";
+}
+
+h2, h3 {
+    font-family: "3B0B58_0_0";
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    &:hover, &:focus, &:visited {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.text-primary {
+    color: $primary-color;
+}
