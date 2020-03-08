@@ -1,0 +1,138 @@
+.jb {
+  display: none;
+  position: absolute;
+
+  transition: all .3s $timing-function;
+  transition-delay: $main-delay;
+
+  &-container {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+
+    &:before, &:after {
+      content: '';
+      height: 200%;
+      width: 200%;
+      position: absolute;
+      top: 100%;
+      left: 100%;
+      transform: rotate(45deg);
+      background-color: white;
+      animation-delay: .5s;
+      z-index: 2;
+    }
+
+    &:after {
+      background-color: $primary-color;
+      animation-delay: .6s;
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    z-index: 1; 
+    animation: toggle-visibility 16s linear infinite;
+    display: none;
+    &-2 {
+      animation-delay: 8s;
+    }
+
+    &-small {
+      visibility: hidden;
+      animation: none;
+    }
+  }
+
+  &-mask {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 3;
+  }
+
+  > img {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+
+  @media only screen and (min-width: $bp-l) {
+    display: block;
+
+    height: calc(100vh - 120px);
+    max-height: calc(50vw * 1.13);
+    width: calc(88vh - 120px);
+    max-width: 50vw;
+    right: calc(50% - 44vh + 60px);
+    bottom: 80px;
+
+    &-image {
+      display: block;
+      &-small {
+        visibility: hidden;
+      }
+    }
+
+    &-container {
+      &:before, &:after {
+        animation-name: diagonal-slide;
+        animation-duration: 8s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: infinite;
+      }
+    }
+
+  }
+}
+
+@media only screen and (min-width: $bp-xl) {
+  .scrolled {
+    .jb {
+      height: 228px;
+      max-height: 228px;
+      margin-right: 0;
+      width: 200px;
+      right: 110px;
+      bottom: 155px;
+      &-container {
+        &:before, &:after {
+          animation: diagonal-slide-instant 1s ease-in-out;
+          animation-delay: 0s;
+        }
+      }
+      &-image {
+        transition: visibility .01s linear;
+        transition-delay: .3s;
+        &-small {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes diagonal-slide {
+  0%, 90%, 99.02%, 100% { top: 100%; left: 100%;}
+  99.01% { top: -200%; left: -200%;}
+}
+
+@keyframes diagonal-slide-instant {
+  0%, 99.02%, 100% { top: 50%; left: 50%;}
+  99.01% { top: -200%; left: -200%;}
+}
+
+@keyframes toggle-visibility {
+  0%, 50% { visibility: visible; }
+  50.01%, 100% { visibility: hidden; }
+}

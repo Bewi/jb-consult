@@ -1,0 +1,66 @@
+footer {
+  position: fixed;
+  bottom: $spacing-xs;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: $spacing-xs;
+  padding-left: $spacing-xs;
+  box-sizing: border-box;
+
+  h3 {
+    font-size: 23px;
+    margin-top: 5px;
+    margin-bottom: 5px
+  }
+
+  a {
+    display: block;
+  }
+
+  .linkedin {
+    height: 20px;
+    width: auto;
+    margin-left: auto;
+
+    > img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  @media only screen and (min-width: $bp-xxs) {
+    a, p {
+      display: inline;
+    }
+    a {
+      margin-left: 15px;
+    }
+  }
+
+  @media only screen and (min-width: $bp-md) {
+    a, p {
+      display: block;
+    }
+    a {
+      margin-left: 0;;
+    }
+    
+    left: auto;
+    width: auto;
+    bottom: $spacing;
+    right: $spacing;
+    
+    h3 {
+      font-size: 30px;
+      margin-top: 10px;
+      margin-bottom: 10px
+    }
+
+    .linkedin {
+      margin-left: 40px;
+    }
+  }
+  
+}

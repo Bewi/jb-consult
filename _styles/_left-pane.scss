@@ -1,0 +1,28 @@
+.left-pane {
+  position: fixed;
+  top: calc(50% - 67px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.25s $timing-function;
+  transition-delay: $main-delay;
+  left: calc(50% - 107.5px);
+  h2 {
+    margin: 0;
+  }
+}
+
+.scrolled {
+  .left-pane {
+    transform: translateX(-35px);
+    opacity: 0;
+    animation: none;
+  }
+}
+
+@media only screen and (min-width: $bp-md) {
+  .left-pane {
+    top: calc(50% - 62.5px);
+    left: $spacing;
+  }
+}
