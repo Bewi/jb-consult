@@ -5,6 +5,19 @@
   transition: all .3s $timing-function;
   transition-delay: $main-delay;
 
+  &:after {
+    content: '';
+    border: 7px solid #1f1f1f;
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    z-index: 5;
+    top: -5px;
+    left: -5px;
+  }
+
   &-container {
     height: 100%;
     max-height: 100%;
@@ -35,7 +48,10 @@
     position: absolute;
     top: 0;
     left: 0;
+    padding: 2px;
+    box-sizing: border-box;
     height: 100%;
+    max-height: 100%;
     width: auto;
     z-index: 1; 
     animation: toggle-visibility 16s linear infinite;
@@ -88,20 +104,21 @@
         animation-name: diagonal-slide;
         animation-duration: 8s;
         animation-timing-function: ease-in-out;
-        animation-fill-mode: infinite;
+        animation-iteration-count: infinite;
       }
     }
 
   }
 }
 
-@media only screen and (min-width: $bp-xl) {
+@media only screen and (min-width: $bp-l) {
   .scrolled {
     .jb {
       height: 228px;
       max-height: 228px;
       margin-right: 0;
       width: 200px;
+      max-width: 200px;
       right: 110px;
       bottom: 155px;
       &-container {
