@@ -6,7 +6,8 @@
   <meta name="description" content="Conseils en gestion financière et management aux PME. Interim Manager & Manager de crise">
   <meta name="google-site-verification" content="u3bx64z1OwkbCl6TCCu4KNgATpGvzPCNeqr72nOecpQ" />
   <title>jb consult</title>
-  <link rel="stylesheet" href="./index.css" type="text/css" />
+  <description>Conseils en gestion financière et management aux PME Interim Manager & Manager de crise</description>
+  <link rel="stylesheet" href="./index.min.css" type="text/css" />
 </head>
 
 <body class="vw-100 vh-100">
@@ -30,8 +31,8 @@
     <div class="jb">
       <div class="jb-container">
         <img class="jb-mask" src="./assets/svgs/jb-mask.svg" />
-        <img class="jb-image jb-image-2" src="./assets/images/jb-background-1.jpg" />
-        <img class="jb-image jb-image-1" src="./assets/images/jb-background-2.jpg" />
+        <img id="jb-image-1" class="jb-image jb-image-2" src="./assets/images/jb-background-1.jpg" />
+        <img id="jb-image-2" class="jb-image jb-image-1" src="./assets/images/jb-background-2.jpg" />
         <img class="jb-image jb-image-small" src="./assets/images/joelle.jpeg" />
       </div>
     </div>
@@ -49,8 +50,8 @@
       </p>
     </div>
 
-    <img src="./assets/svgs/up-arrow.svg" alt="scroll to see more" class="slide-arrow up" />
-    <img src="./assets/svgs/down-arrow.svg" alt="scroll to see more" class="slide-arrow down" />
+    <img src="./assets/svgs/up-arrow.svg" alt="scroll to see more" class="slide-arrow up" onclick="scrollUp();" />
+    <img src="./assets/svgs/down-arrow.svg" alt="scroll to see more" class="slide-arrow down" onclick="scrollDown();" />
   </main>
   <footer class="contact d-flex">
     <div>
@@ -64,31 +65,7 @@
     </a>
   </footer>
 
-  <script type="text/javascript">
-    (function () {
-      document.getElementsByTagName('body')[0].onscroll = function () {
-        debounce(handleScroll, 300);
-      };
-    })();
-
-    function debounce(method, delay) {
-      clearTimeout(method._tId);
-      method._tId = setTimeout(function () {
-        method();
-      }, delay);
-    }
-
-    function handleScroll() {
-      var doc = document.documentElement;
-      var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-
-      if (top > 0) {
-        document.getElementById('main').classList.add('scrolled');
-      } else {
-        document.getElementById('main').classList.remove('scrolled');
-      }
-    }
-  </script>
+  <script type="text/javascript" src="./app.min.js"></script>
 </body>
 
 </html>

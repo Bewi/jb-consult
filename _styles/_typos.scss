@@ -9,6 +9,11 @@ body {
     font-family: CircularPro;
     color: white;
     background-color: $secondary-color;
+    font-size: 15px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -16,12 +21,17 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 10px;
 }
 
-h1 {
+h2 {
     font-family: "OrpheusPro";
+    font-size: 37px;
+    font-weight: 300;
 }
 
-h2, h3 {
-    font-family: "3B0B58_0_0";
+h3 {
+    font-size: 30px;
+    font-family: "OrpheusPro";
+    font-weight: 300;
+    // font-family: "3B0B58_0_0";
 }
 
 a {
