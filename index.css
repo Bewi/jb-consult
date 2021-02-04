@@ -1,27 +1,36 @@
 @font-face {
   font-family: "CircularPro";
   font-weight: bold;
-  src: url("fonts/CircularPro-Bold/CircularPro-Bold.otf") format("opentype"); }
+  src: url("fonts/CircularPro-Bold/CircularPro-Bold.otf") format("opentype"); 
+  font-display: swap;
+}
 
 @font-face {
   font-family: "CircularPro";
   font-weight: normal;
-  src: url("fonts/CircularPro-Bold/CircularPro-Book.otf") format("opentype"); }
+  src: url("fonts/CircularPro-Bold/CircularPro-Book.otf") format("opentype"); 
+  font-display: swap;
+}
 
 @font-face {
   font-family: "3B0B58_0_0";
-  src: url("fonts/MyFontsWebfontsKit/3B0B58_0_0.eot?") format("eot"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.woff2") format("woff2"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.woff") format("woff"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.ttf") format("truetype"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.svg#3B0B58_0_0") format("svg"); }
+  src: url("fonts/MyFontsWebfontsKit/3B0B58_0_0.eot?") format("eot"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.woff2") format("woff2"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.woff") format("woff"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.ttf") format("truetype"), url("fonts/MyFontsWebfontsKit/3B0B58_0_0.svg#3B0B58_0_0") format("svg"); 
+  font-display: swap;
+}
 
 @font-face {
   font-family: "OrpheusPro";
   font-weight: normal;
-  src: url("fonts/Orpheus-Pro/OrpheusPro.otf") format("opentype"); }
+  src: url("fonts/Orpheus-Pro/OrpheusPro.otf") format("opentype"); 
+  font-display: swap;
+}
 
 body {
   font-family: CircularPro;
   color: white;
   background-color: #1f1f1f;
-  font-size: 15px; }
+  font-size: 15px; 
+}
 
 h1 {
   font-size: 36px;
