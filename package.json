@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "sass": "node-sass _styles/app.scss index.css"
+    "sass": "node-sass _styles/app.scss index.css",
     "sass-minified": "node-sass _styles/app.scss index.min.css --output-style compressed"
   },
   "author": "",
